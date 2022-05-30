@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>DevOps Clásico - INCOIN-CDI-PERÚ - 2022</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h4>Proceso de desarrollo de software en IT (clásico)</h4>
+					<section>
+						<h4>... historia en (muy) pocas palabras ...</h4>
+						<ul style="font-size: 20px;">
+							<li>Antes : Modelo en V
+								<ul>
+									<li>Importancia de producir especificationes detalladas previo a la fase de programación</li> 
+								</ul>
+							</li>
+							<li>Ahora : <b style="color: rgba(4, 143, 34, 0.91);">Modelo Agil</b>
+								<ul>
+									<li>Separación en funcionalidades esenciales (mínimas) y perifericas (accesorias)
+										<ul>
+											<li><b style="color: rgba(4, 143, 34, 0.91);">MVP</b> (Minimum Viable Product)</li>
+										</ul>
+									</li>
+									<li>Esquema <b style="color: rgba(4, 143, 34, 0.91);">DevOps</b> : conciliación entre la construcción (<b style="color: rgba(4, 143, 34, 0.91);">dev</b>) de un producto (dev) y la puesta (y manuntención) en producción (<b style="color: rgba(4, 143, 34, 0.91);">ops</b>).</li>	
+								</ul>
+							</li>
+							<img src="imgs/devops-process.png" width="40%" height="40%">
+						</ul>
+						
+					</section>
+					<section>
+						<h4>Industrialización</h4>
+						<ul style="font-size: 20px;">
+							<li>Basada en un conjunto de herramientas (forge) que facilitan la automatización de tareas permitiendo al desarrolador y/o al operador concentrase en las actividades esenciales que necesitan la intervención humana.
+							</li>
+						</ul>
+						<img src="imgs/devops-process-forge.png" width="60%" height="60%">
+					</section>
+				</section>	
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>

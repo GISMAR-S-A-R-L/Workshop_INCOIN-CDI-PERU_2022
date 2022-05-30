@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Workshop INCOIN-CDI-PERÚ - Junio 2022</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h4>Proceso de desarrollo de software en Inteligencia Artificial</h4>
+					<ul style="font-size: 30px;">
+						<li>Como se <b style="color: rgba(4, 143, 34, 0.91);"">construye</b> (<i>dev</i>) y se <b style="color: rgba(4, 143, 34, 0.91);">opera</b> (<i>ops</i>) un desarrollo en IA?</li>
+						<li>Se puede aplicar el esquema DevOps?</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Contexto : diferencia entre Artificial Intelligence, Machine Learning y Deep Leaerning</h4>
+					<ul style="font-size: 20px;">
+						<li>La <b style="color: rgba(4, 143, 34, 0.91);">Artificial Inteligence</b> tiene como objetivo aportar soluciones que permiten a un ordenador razonar y tomar decisiones sin intervention humana.
+							<ul>
+								<li><b style="color: rgba(4, 143, 34, 0.91);">Machine Learning</b> : dar la capacidad a un ordenador de aprender sin una acción de programación explicita
+									<ul>
+										<li><b style="color: rgba(4, 143, 34, 0.91);">Deep Learning</b> : aportar algoritmos inspirados en la forma que el cerebro humano filtra la information durante el proceso de aprendizaje</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<img src="imgs/ai_ml_dl.png" alt="">
+				</section>
+				<section>
+					<h4>... bajo la piel de un programador IA-ML ...</h4>
+					<span style="float:left;">
+						<!--<img src="imgs/devops-process_devs_blur.png" alt="" width="30%" height="30%"></span>-->
+					<ul style="font-size: 20px;">
+						<img src="imgs/dev_etapas_dl_supervisado.png" alt="" width="100%" height="100%">
+					</ul>
+				</section>
+				<section>
+					<h4>... bajo la piel de un programador IA-ML ...</h4>
+					<span style="float:left;">
+						<!--<img src="imgs/devops-process_devs_blur.png" alt="" width="30%" height="30%"></span>-->
+					<ul style="font-size: 20px;">
+						<li>Ilustración a traves de un problema simple de clasification de imagénes
+							<ul>
+								<li>Datos de entradas : imagénes de perros y gatos</li>
+								<li>Tipo de problema : clasification binaria (dos clases : perro o gato)</li>
+								<li>Implementación
+									<ul>
+										<li>Lenguaje de programación : <a href="https://www.python.org/">Python</a></li>
+										<li>Plataforma <a href="https://www.tensorflow.org/?hl=fr">TensorFlow(Google AI)</a> + <a href="https://keras.io/">Keras</a>
+											<ul>
+												<li>Alternativa : <a href="https://pytorch.org/">PyTroch</a></li>
+											</ul>
+										</li>
+										<li>Motor de ejecución (notebook) en ligne (https://colab.research.google.com/)
+											<ul>
+												<li>Alternativa : <a href="https://jupyter.org/"></a>JupyterLab</li>
+											</ul>
+										</li>
+										<li><a href="https://colab.research.google.com/drive/18CJxJoGM_Rj5NVuHbIQnz-ADB3uVKb63#scrollTo=UK7_Fflgv8YC" target="_blank">Solución : notebook de clasificación de imágenes (perros y gatos)</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h4> ... una vez que el modelo disponible, que?   </h4>
+					<span style="float:left;">
+						<!--<img src="imgs/devops-process_devs_blur.png" alt="" width="30%" height="30%"></span>-->
+					<ul style="font-size: 30px;">
+						<li>La puesta en producción del modelo DL resultante es relativament simple.
+							<ul>
+								<li><a href="https://www.tensorflow.org/js?hl=es">TensorflowJS</a> : con 50 lineas de codigo (HTML/Javascript) el modelo puede ser expuesto en una aplicación Web</li>
+							</ul>
+						</li>
+						<li>Cómo estar seguro que el modelo se comporta con datos reales de la misma manera (precisión) que druante el proceso de aprendizaje ?
+							<ul>
+								<li>En IT clásico los datos reales son conocidos (edad, saldo de cuenta, temperatura, etc)</li>
+								<li>En ML generar/disponer las imágenes posibles y reales de perros o gatos no es viable?</li>
+							</ul>
+						</li>
+						<li>La respuesta dada por la comunidad es <b style="color: rgba(4, 143, 34, 0.91);">MLOps</b></li>
+					</ul>
+				</section>
+				<section>
+					<h4>MLOps</h4>
+					<ul style="font-size: 20px;">
+						<li>Respuesta a los desafios de industrialización y mantenimiento de desarrollos en IA
+							<ul>
+								<li>dificultad del modelo para adaptase a los cambios del entorno</li>
+							</ul>
+						</li>
+						
+					</ul>
+					<img src="imgs/ml_ops.png" alt="" width="70%" height="70%">
+					<ul style="font-size: 20px;">
+						<li>Rol principal : supervisión de resultados y tests frecuentes para detectar eventuales <b style="color: rgba(4, 143, 34, 0.91);">desviaciones</b> (drift)</li>
+					</ul>
+				</section>
+				<section>
+					<h4>MLOps</h4>
+					<ul style="font-size: 20px;">
+						<li>Tipos de desviación
+							<ul>
+								<li>De datos : se presenta cuando la tipologia de los datos procesados en producción difieren de los datos utilisados durante el aprendizaje
+									<ul>
+										<li>Ejemplo : incorporacion del barbijo en imágenes de las personas</li>
+									</ul>
+								</li>
+								<li>De concepto : se presenta cuando cambian las propiedades estadisticas de las variables sobre las que se basa el modelo 
+									<ul>
+										<li>Ejemplo : cambio de habitos de consumidores segun la temporada</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>Ejemplo de implementación : herramienta <a href="https://eurybia.readthedocs.io/en/latest/">Eurybia</a></li>
+
+					</ul>
+					<img src="imgs/life_cycle_eurybia.png" alt="" width="40%" height="40%">
+					<img src="imgs/life_cycle_eurybia.png" alt="" width="40%" height="40%">
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
