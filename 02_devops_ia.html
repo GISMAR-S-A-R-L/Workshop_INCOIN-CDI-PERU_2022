@@ -47,7 +47,6 @@
 				</section>
 				<section>
 					<h4>... bajo la piel de un desarrollador ML ...</h4>
-					<span style="float:left;">
 					<ul style="font-size: 20px;">
 						<img src="imgs/dev_etapas_dl_supervisado.png" alt="" width="100%" height="100%">
 					</ul>
@@ -55,25 +54,25 @@
 				<section>
 					<h4>... bajo la piel de un desarrollador ML ...</h4>
 					<span style="float:left;">
-					<ul style="font-size: 20px;">
-						<li>Ilustración a traves de un problema simple de clasification de imagénes
+					<ul style="font-size: 30px;">
+						<li>Ilustración a través de un problema simple de clasificación de imágenes
 							<ul>
-								<li>Datos de entradas : imagénes de perros y gatos</li>
-								<li>Tipo de problema : clasification binaria (dos clases : perro o gato)</li>
+								<li>Datos de entradas: imágenes de perros y gatos.</li>
+								<li>Tipo de problema: clasificación binaria (dos clases: perro o gato)</li>
 								<li>Implementación
 									<ul>
-										<li>Lenguaje de programación : <a href="https://www.python.org/">Python</a></li>
+										<li>Lenguaje de programación: <a href="https://www.python.org/">Python</a></li>
 										<li>Plataforma <a href="https://www.tensorflow.org/?hl=fr">TensorFlow(Google AI)</a> + <a href="https://keras.io/">Keras</a>
 											<ul>
-												<li>Alternativa : <a href="https://pytorch.org/">PyTroch</a></li>
+												<li>Otra Opción del mercado: <a href="https://pytorch.org/">PyTroch</a></li>
 											</ul>
 										</li>
-										<li>Motor de ejecución (notebook) en ligne (https://colab.research.google.com/)
+										<li>Motor de ejecución (notebook) en línea (https://colab.research.google.com/)
 											<ul>
-												<li>Alternativa : <a href="https://jupyter.org/"></a>JupyterLab</li>
+												<li>Otra Opción del mercado: <a href="https://jupyter.org/"></a>JupyterLab</li>
 											</ul>
 										</li>
-										<li><a href="https://colab.research.google.com/drive/18CJxJoGM_Rj5NVuHbIQnz-ADB3uVKb63#scrollTo=UK7_Fflgv8YC" target="_blank">Solución : notebook de clasificación de imágenes (perros y gatos)</a></li>
+										<li><a href="https://colab.research.google.com/drive/18CJxJoGM_Rj5NVuHbIQnz-ADB3uVKb63#scrollTo=UK7_Fflgv8YC" target="_blank">Solución: notebook de clasificación de imágenes (perros y gatos)</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -81,61 +80,61 @@
 					</ul>
 				</section>
 				<section>
-					<h4> ... una vez que el modelo disponible, que?   </h4>
+					<h4> ... y una vez que el modelo contruido, que?   </h4>
 					<span style="float:left;">
-						<!--<img src="imgs/devops-process_devs_blur.png" alt="" width="30%" height="30%"></span>-->
 					<ul style="font-size: 30px;">
-						<li>La puesta en producción del modelo DL resultante es relativament simple.
+						<li>La puesta en producción del modelo DL resultante es sorprendentemente simple.
 							<ul>
-								<li><a href="https://www.tensorflow.org/js?hl=es">TensorflowJS</a> : con 50 lineas de codigo (HTML/Javascript) el modelo puede ser expuesto en una aplicación Web</li>
+								<li><a href="https://www.tensorflow.org/js?hl=es">TensorflowJS</a> : con 50 líneas de código (HTML/Javascript) el modelo puede ser expuesto en una aplicación Web</li>
 							</ul>
 						</li>
-						<li>Cómo estar seguro que el modelo se comporta con datos reales de la misma manera (precisión) que druante el proceso de aprendizaje ?
+						<li>¿Cómo estar seguro que el modelo se comporta con datos reales de la misma manera (precisión) que durante el proceso de aprendizaje?
 							<ul>
-								<li>En IT clásico los datos reales son conocidos (edad, saldo de cuenta, temperatura, etc)</li>
+								<li>En IT clásico los datos reales son conocidos (edad, saldo de cuenta, temperatura, etc.)</li>
 								<li>En ML generar/disponer las imágenes posibles y reales de perros o gatos no es viable?</li>
 							</ul>
 						</li>
-						<li>La respuesta dada por la comunidad es <b style="color: rgba(4, 143, 34, 0.91);">MLOps</b></li>
+						<li>La respuesta dada por la comunidad es ... ... ... <b style="color: rgba(4, 143, 34, 0.91);">MLOps</b></li>
 					</ul>
 				</section>
 				<section>
 					<h4>MLOps</h4>
-					<ul style="font-size: 20px;">
-						<li>Respuesta a los desafios de industrialización y mantenimiento de desarrollos en IA
-							<ul>
-								<li>dificultad del modelo para adaptase a los cambios del entorno</li>
+					<ul style="font-size: 30px;">
+						<li>Permite hacer frente a los desafíos de industrialización y mantenimiento de desarrollos en IA.
+							<ul style="font-size: 25px;">
+								<li>el principal desafíos es la dificultad del modelo para adaptase a los cambios del entorno</li>
+								<li>¿cómo cualquier implementación? la dificultad en ML es que los cambios son más difíciles de prever e identificar</li>
 							</ul>
 						</li>
 						
 					</ul>
 					<img src="imgs/ml_ops.png" alt="" width="70%" height="70%">
-					<ul style="font-size: 20px;">
-						<li>Rol principal : supervisión de resultados y tests frecuentes para detectar eventuales <b style="color: rgba(4, 143, 34, 0.91);">desviaciones</b> (drift)</li>
+					<ul style="font-size: 25px;">
+						<li>Objetivo principal: supervisión de resultados y tests frecuentes para detectar eventuales <b style="color: rgba(4, 143, 34, 0.91);">desviaciones</b> (drift)</li>
 					</ul>
 				</section>
 				<section>
 					<h4>MLOps</h4>
-					<ul style="font-size: 20px;">
-						<li>Tipos de desviación
-							<ul>
-								<li>De datos : se presenta cuando la tipologia de los datos procesados en producción difieren de los datos utilisados durante el aprendizaje
+					<ul style="font-size: 30px;">
+						<li>Tipos de <b style="color: rgba(4, 143, 34, 0.91);">desviaciones</b>
+							<ul style="font-size: 25px;">
+								<li><b style="color: rgba(4, 143, 34, 0.91);">De datos</b>: se presenta cuando la tipología de los datos procesados en producción difiere de la tipología de los datos utilizados durante el aprendizaje.
 									<ul>
-										<li>Ejemplo : incorporacion del barbijo en imágenes de las personas</li>
+										<li>Ejemplo: utilización del barbijo.</li>
 									</ul>
 								</li>
-								<li>De concepto : se presenta cuando cambian las propiedades estadisticas de las variables sobre las que se basa el modelo 
+								<li><b style="color: rgba(4, 143, 34, 0.91);">De concepto</b>: se presenta cuando cambian las propiedades estadísticas de las variables sobre las que se basa el modelo.
 									<ul>
-										<li>Ejemplo : cambio de habitos de consumidores segun la temporada</li>
+										<li>Ejemplo: cambio de hábitos de consumidores según la temporada.</li>
 									</ul>
 								</li>
 							</ul>
 						</li>
-						<li>Ejemplo de implementación : herramienta <a href="https://eurybia.readthedocs.io/en/latest/">Eurybia</a></li>
+						<li>Un ejemplo de implementación: plataforma <a href="https://eurybia.readthedocs.io/en/latest/">Eurybia</a></li>
 
 					</ul>
 					<img src="imgs/life_cycle_eurybia.png" alt="" width="40%" height="40%">
-					<img src="imgs/drift_eurybia.png" alt="" width="40%" height="40%">
+					<img src="imgs/life_cycle_eurybia.png" alt="" width="40%" height="40%">
 				</section>
 			</div>
 		</div>
